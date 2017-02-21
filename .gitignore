@@ -1,0 +1,12 @@
+target
+bin
+build
+dist
+test/build
+.project
+.settings
+.classpath
+.idea.xml
+.idea/
+*.iml
+*.spec

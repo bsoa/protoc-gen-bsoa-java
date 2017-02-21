@@ -1,0 +1,16 @@
+// 自定义包路径 + 多个文件 + service和models分开
+syntax = "proto3";
+
+//option java_multiple_files = true;
+option java_package = "io.bsoa.rpc.example.test5";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package test5;
+
+service Greeter {
+  rpc sayHello (HelloRequest) returns (HelloResponse) {}
+  rpc sayHello2 (HelloRequest) returns (HelloResponse) {}
+}
+
+import "helloModels.proto";

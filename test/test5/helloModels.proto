@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+//option java_multiple_files = true;
+option java_package = "io.bsoa.rpc.example.test5";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+package test5;
+
+message HelloRequest {
+  string name = 1;
+  Group group = 2;
+}
+
+message HelloResponse {
+  int32 code = 1;
+  string message = 2;
+}
+
+enum Group {
+  A = 0;
+  B = 1;
+}

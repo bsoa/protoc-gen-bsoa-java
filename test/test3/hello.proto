@@ -1,0 +1,34 @@
+// 多个文件
+syntax = "proto3";
+
+option java_multiple_files = true;
+//option java_package = "io.bsoa.rpc.example.test3";
+//option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package test3;
+
+service Greeter {
+  rpc sayHello (HelloRequest) returns (HelloResponse) {}
+  rpc sayHello2 (HelloRequest) returns (HelloResponse) {}
+}
+//
+//service Greeter2 {
+//  rpc sayHello (HelloRequest) returns (HelloResponse) {}
+//  rpc sayHello2 (HelloRequest) returns (HelloResponse) {}
+//}
+
+message HelloRequest {
+  string name = 1;
+  Group group = 2;
+}
+
+message HelloResponse {
+  int32 code = 1;
+  string message = 2;
+}
+
+enum Group {
+  A = 0;
+  B = 1;
+}

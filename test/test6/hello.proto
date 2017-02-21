@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.bsoa.rpc.example.test6";
+option java_outer_classname = "HelloWorldProto";
+option objc_class_prefix = "HLW";
+
+package test6;
+
+service Greeter {
+  rpc sayHello (HelloRequest) returns (HelloResponse) {}
+//  rpc sayHello2 (HelloRequest) returns (HelloResponse) {}
+}
+
+import "helloModels.proto";
